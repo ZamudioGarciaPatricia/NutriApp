@@ -12,4 +12,4 @@ No.control: 24308060610017
 
 Patricia Zamudio Garcia 
 No.control 24308060610116@cetis61.edu.mx
-![persona2]()
+![persona2](https://github.com/ZamudioGarciaPatricia/NutriApp/blob/main/WhatsApp%20Image%202025-09-17%20at%203.18.56%20PM.jpeg)
