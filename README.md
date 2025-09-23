@@ -8,7 +8,7 @@ En este repositorio el objetivo principal es agregar y escribir toda la document
 #### Nuestro equipo de conformado por:
 Edwin Jamel Martinez Arias
 No.control: 24308060610017
-![persona]()
+![persona](https://github.com/ZamudioGarciaPatricia/NutriApp/blob/main/IMG-20250220-WA0011.jpg)
 
 Patricia Zamudio Garcia 
 No.control 24308060610116@cetis61.edu.mx
