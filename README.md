@@ -16,4 +16,4 @@ Patricia Zamudio Garcia
 No.control 24308060610116
 3D
 Especialidad:programacion 
-![persona2](https://github.com/ZamudioGarciaPatricia/NutriApp/blob/main/WhatsApp%20Image%202025-09-17%20at%203.18.56%20PM.jpeg)
+![persona2](https://github.com/ZamudioGarciaPatricia/NutriApp/blob/main/static/img/yoframework.png)
