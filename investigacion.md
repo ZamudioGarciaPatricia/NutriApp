@@ -82,12 +82,12 @@ manera sostenible.
 
 
 ### Tabla comparativa
-¡[Tabla comparativa]()
+¡[Tabla comparativa](https://github.com/ZamudioGarciaPatricia/NutriApp/blob/main/static/img/tabla%20comparativa.png)
 
 
 
 ### Fotos de apoyo
-¡[Fotos de apoyo]()
+¡[Fotos de apoyo](https://github.com/ZamudioGarciaPatricia/NutriApp/blob/main/static/img/Capturasdepantalla.png)
 
 ### Diseñó y resultados de la encuesta 
 **Diseño**
@@ -103,8 +103,8 @@ ayudar sugiriendo alguna funcionalidad o eligiendo una función qué sientan le 
 ayuda ya qué esto entre otras preguntas nos ayudará a elaborar una aplicación adaptada a sus
 necesidades y prioridades.
 A continuación te presentamos algunas gráficas qué muestran los resultados de las preguntas 
-¡[Encuestas foto 1]()
-¡[Encuestas foto 2]()
+¡[Encuestas foto 1](https://github.com/ZamudioGarciaPatricia/NutriApp/blob/main/static/img/encuestas1.png)
+¡[Encuestas foto 2](https://github.com/ZamudioGarciaPatricia/NutriApp/blob/main/static/img/encuestas2.png)
 
 
 
