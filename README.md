@@ -10,7 +10,7 @@ Edwin Jamel Martinez Arias
 No.control: 24308060610017
 3D
 especialidad:programacion 
-![persona](https://github.com/ZamudioGarciaPatricia/NutriApp/blob/main/IMG-20250220-WA0011.jpg)
+![persona](https://github.com/ZamudioGarciaPatricia/NutriApp/blob/main/static/img/Edwin.jpg)
 
 Patricia Zamudio Garcia 
 No.control 24308060610116
