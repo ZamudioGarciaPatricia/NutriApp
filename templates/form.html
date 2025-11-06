@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% block title %}Perfil de Usuario - Kiwi App{% endblock %}
+
+{% block content %}
+<main>
+    <h1 class="text-center mb-4">🥝 Perfil Detallado del Usuario</h1>
+    <form action="#" method="POST">
+        
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0"> Información Básica y de Acceso</h4>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="apellidos" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">Datos Físicos y Estilo de Vida</h4>
+            </div>
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-sm-6 col-md-3">
+                        <label for="edad" class="form-label">Edad (años)</label>
+                        <input type="number" class="form-control" id="edad" name="edad" min="1" max="120" required>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <label for="sexo" class="form-label">Sexo</label>
+                        <select class="form-select" id="sexo" name="sexo" required>
+                            <option selected disabled value="">Elegir...</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <label for="peso" class="form-label">Peso (kg)</label>
+                        <input type="number" step="0.1" class="form-control" id="peso" name="peso" min="10" required>
+                    </div>
+                    <div class="col-sm-6 col-md-3">
+                        <label for="altura" class="form-label">Altura (cm)</label>
+                        <input type="number" class="form-control" id="altura" name="altura" min="50" max="250" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="nivel_actividad" class="form-label">Nivel de Actividad Física</label>
+                        <select class="form-select" id="nivel_actividad" name="nivel_actividad" required>
+                            <option selected disabled value="">Selecciona tu nivel...</option>
+                            <option value="sedentario">Sedentario (poco o ningún ejercicio)</option>
+                            <option value="ligero">Ligero (ejercicio ligero 1-3 días/semana)</option>
+                            <option value="moderado">Moderado (ejercicio moderado 3-5 días/semana)</option>
+                            <option value="activo">Activo (ejercicio fuerte 6-7 días/semana)</option>
+                            <option value="muy_activo">Muy Activo (ejercicio muy fuerte o trabajo físico)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-warning text-dark">
+                <h4 class="mb-0">🎯 Objetivos y Restricciones Dietéticas</h4>
+            </div>
+            <div class="card-body">
+                <p class="fw-bold">¿Cuál es tu principal objetivo? (Puedes seleccionar varios)</p>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="bajar_peso" id="obj_bajar_peso" name="objetivos">
+                            <label class="form-check-label" for="obj_bajar_peso">Bajar de peso</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="aumentar_musculo" id="obj_aumentar_musculo" name="objetivos">
+                            <label class="form-check-label" for="obj_aumentar_musculo">Aumentar masa muscular</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="mantener_peso" id="obj_mantener_peso" name="objetivos">
+                            <label class="form-check-label" for="obj_mantener_peso">Mantener peso</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="mejorar_digestion" id="obj_mejorar_digestion" name="objetivos">
+                            <label class="form-check-label" for="obj_mejorar_digestion">Mejorar digestión</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="control_diabetes" id="obj_control_diabetes" name="objetivos">
+                            <label class="form-check-label" for="obj_control_diabetes">Controlar diabetes</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="control_hipertension" id="obj_control_hipertension" name="objetivos">
+                            <label class="form-check-label" for="obj_control_hipertension">Controlar hipertensión</label>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="otro_objetivo" class="form-label">Otro objetivo (opcional):</label>
+                        <input type="text" class="form-control" id="otro_objetivo" name="otro_objetivo">
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <p class="fw-bold">Alergias e Intolerancias:</p>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="alergias" class="form-label">Alergias (Separadas por coma, ej: maní, mariscos)</label>
+                        <input type="text" class="form-control" id="alergias" name="alergias" placeholder="Ej: maní, mariscos, frutos secos">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="intolerancias" class="form-label">Intolerancias (Separadas por coma, ej: lactosa, gluten)</label>
+                        <input type="text" class="form-control" id="intolerancias" name="intolerancias" placeholder="Ej: lactosa, gluten">
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <p class="fw-bold">Tipo de Dieta Específica:</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <select class="form-select" id="tipo_dieta" name="tipo_dieta">
+                            <option selected value="ninguna">Ninguna</option>
+                            <option value="vegana">Vegana</option>
+                            <option value="vegetariana">Vegetariana</option>
+                            <option value="keto">Keto</option>
+                            <option value="mediterranea">Mediterránea</option>
+                            <option value="paleo">Paleo</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="alimentos_no_gustan" class="form-label">Alimentos que no te gustan (opcional)</label>
+                        <input type="text" class="form-control" id="alimentos_no_gustan" name="alimentos_no_gustan" placeholder="Ej: cebolla, cilantro, hígado">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-secondary text-white">
+                <h4 class="mb-0">Nivel de Experiencia en la Cocina</h4>
+            </div>
+            <div class="card-body">
+                <label for="nivel_experiencia" class="form-label">¿Cómo describirías tu habilidad en la cocina?</label>
+                <select class="form-select" id="nivel_experiencia" name="nivel_experiencia" required>
+                    <option selected disabled value="">Selecciona tu nivel...</option>
+                    <option value="principiante">Principiante (Cocino muy poco o solo cosas básicas)</option>
+                    <option value="intermedio">Intermedio (Cocino regularmente, puedo seguir recetas)</option>
+                    <option value="chef_aficionado">Chef Aficionado (Me encanta cocinar, experimento con recetas)</option>
+                    <option value="experto">Experto (Tengo mucha experiencia y conocimiento)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="d-grid gap-2 mb-5">
+            <button type="submit" class="btn btn-success btn-lg"> Guardar Perfil</button>
+        </div>
+
+    </form>
+</main>
+{% endblock %}
