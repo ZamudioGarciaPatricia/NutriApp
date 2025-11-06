@@ -6,6 +6,9 @@ app = Flask(__name__)
 def index():
     return render_template('inicio.html')
 
+@app.route('/formulario')
+def forms():
+    return render_template('forms.html')
 
 
 if __name__ == '__main__':
