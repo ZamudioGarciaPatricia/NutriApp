@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} herraminetas{% endblock %}
+
+{% block head_extra %}
+{% endblock %}
+
+{% block content %}
+<H1>Mejora tu nutricion con nuestras herraminetas</H1>
+<div>
+    <h3>Calculadora de imc</h3>
+    <form action="" method="POST">
+        <div id="contenedor-ingredientes" class="mb-3">
+            <div class="ingrediente-item input-group mb-2">
+                <span class="input-group-text bg-light text-muted fw-bold">#</span>
+                <input type="number" placeholder="Escribe tu peso en kg" class="form-control" name="kg_imc"
+                    value="kg_imc" />
+
+                <input type="number" placeholder="tu altura en cm ejem: 1.65cm" class="" min="0" name="cm_imc"
+                    value="cm_imc" />
+            </div>
+        </div>
+
+        <button type="submit" id="btn-calcular" class="btn btn-success w-100 btn-lg">
+        </button>
+    </form>
+</div>
+<div>
+    <h3>Calculadora de TMB</h3>
+    <div class="card">
+        <div class="card-body">
+            This is some text within a card body.
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}
