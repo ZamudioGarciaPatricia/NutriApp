@@ -29,8 +29,25 @@
     <h3>Calculadora de TMB</h3>
     <div class="card">
         <div class="card-body">
-            This is some text within a card body.
+            conocer tu tasa Metaabolica basal puede ser un punto de partida para diseñar un 
+            plan de alimentación y ejercicio, 
+            especialmente si buscas perder peso. 
         </div>
+            <form action="" method="POST">
+        <div id="tbm" class="mb-3">
+            <div class="ingrediente-item input-group mb-2">
+                <span class="input-group-text bg-light text-muted fw-bold">#</span>
+                <input type="number" placeholder="Escribe tu peso en kg" class="form-control" name="kg_imc"
+                    value="kg_imc" />
+
+                <input type="number" placeholder="tu altura en cm ejem: 1.65cm" class="" min="0" name="cm_imc"
+                    value="cm_imc" />
+            </div>
+        </div>
+
+        <button type="submit" id="btn-calcular" class="btn btn-success w-100 btn-lg">
+        </button>
+    </form>
     </div>
 </div>
 {% endblock %}
