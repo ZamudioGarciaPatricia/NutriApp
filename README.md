@@ -17,3 +17,6 @@ No.control 24308060610116
 3D
 Especialidad:programacion 
 ![persona2](https://github.com/ZamudioGarciaPatricia/NutriApp/blob/main/static/img/yoframework.png)
+
+#### Notas personales
+pip install -r requirements.txt

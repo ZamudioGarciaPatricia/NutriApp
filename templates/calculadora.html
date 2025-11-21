@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}info {% endblock %}
+
+{% block head_extra %}
+    {% endblock %}
+
+{% block content %}
+<body class="bg-dark text-light p-4">
+
+<div class="container">
+    <h1 class="mb-4 text-center">Calculadoras</h1>
+
+    <form action="/calculadora" method="POST" class="row g-3">
+
+        <div class="col-md-6">
+            <label for="peso" class="form-label">Peso (kg)</label>
+            <input type="number" step="0.1" class="form-control bg-secondary text-light" id="peso" name="peso" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="altura" class="form-label">Altura (m)</label>
+            <input type="number" step="0.01" class="form-control bg-secondary text-light" id="altura" name="altura" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="number" class="form-control bg-secondary text-light" id="edad" name="edad" required>
+        </div>
+
+        <div class="col-md-6">
+            <label for="sexo" class="form-label">Sexo</label>
+            <select id="sexo" name="sexo" class="form-select bg-secondary text-light" required>
+                <option value="">Selecciona</option>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+            </select>
+        </div>
+
+        <div class="col-md-12">
+            <label for="actividad" class="form-label">Nivel de actividad</label>
+            <select id="actividad" name="actividad" class="form-select bg-secondary text-light" required>
+                <option value="">Selecciona</option>
+                <option value="sedentario">Sedentario</option>
+                <option value="ligero">Actividad ligera</option>
+                <option value="moderado">Actividad moderada</option>
+                <option value="alto">Actividad alta</option>
+                <option value="muy_alto">Muy alta</option>
+            </select>
+        </div>
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary w-100">Calcular</button>
+        </div>
+
+    </form>
+</div>
+
+</body>
+{% endblock %}
+
+{% block scripts %}
+    {% endblock %}
