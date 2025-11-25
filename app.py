@@ -14,7 +14,9 @@ def form1():
 def Aprende_mas():
     return render_template('miinfo.html')
 
-
+@app.route('/recetas')
+def Aprende_mas():
+    return render_template('recetas.html')
 
 #calculadora 
 
