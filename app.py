@@ -7,7 +7,7 @@ def inicio():
     return render_template('inicio.html')
 
 @app.route('/form')
-def animales():
+def form1():
     return render_template('form.html')
 
 @app.route('/Aprendemas')
