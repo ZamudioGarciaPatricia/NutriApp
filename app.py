@@ -10,13 +10,10 @@ def inicio():
 def form1():
     return render_template('form.html')
 
-@app.route('/Aprendemas')
-def Aprende_mas():
-    return render_template('miinfo.html')
+@app.route('/info')
+def info():
+    return render_template('info.html')
 
-@app.route('/recetas')
-def Aprende_mas():
-    return render_template('recetas.html')
 
 #calculadora 
 
