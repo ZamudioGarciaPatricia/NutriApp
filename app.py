@@ -10,6 +10,10 @@ def inicio():
 def animales():
     return render_template('form.html')
 
+@app.route('/Aprendemas')
+def Aprende_mas():
+    return render_template('miinfo.html')
+
 
 
 #calculadora 
