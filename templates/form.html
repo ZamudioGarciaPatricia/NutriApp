@@ -5,21 +5,21 @@
 {% block content %}
 <main class="container py-5">
     <h1 class="text-center mb-4 text-secondary">🥝 Conviértete en un kiwi usuario.</h1>
-    <form action="#" method="POST">
+    <form action="/perfil" method="POST">
         
         <div class="card mb-4 shadow-sm border-secondary">
-            <div class="card-header bg-light text-secondary">
-                <h4 class="mb-0">Información Básica y de Acceso</h4>
+            <div class="card-header bg-dark text-light">
+                <h4 class="mb-0">Personal</h4>
             </div>
             <div class="card-body bg-light">
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label for="nombre" class="form-label text-muted">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required minlength="2">
                     </div>
                     <div class="col-md-6">
                         <label for="apellidos" class="form-label text-muted">Apellidos</label>
-                        <input type="text" class="form-control" id="apellidos" name="apellidos" required>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" required minlength="2">
                     </div>
 
                     <div class="col-md-6">
@@ -35,8 +35,8 @@
         </div>
 
         <div class="card mb-4 shadow-sm border-secondary">
-            <div class="card-header bg-light text-secondary">
-                <h4 class="mb-0">Datos Físicos y Estilo de Vida</h4>
+            <div class="card-header bg-dark text-light">
+                <h4 class="mb-0">Datos basicos</h4>
             </div>
             <div class="card-body bg-light">
                 <div class="row g-3">
@@ -59,18 +59,18 @@
                     </div>
                     <div class="col-sm-6 col-md-3">
                         <label for="altura" class="form-label text-muted">Altura (cm)</label>
-                        <input type="number" class="form-control" id="altura" name="altura" min="50" max="250" required>
+                        <input type="number" class="form-control" id="altura" name="altura" min="50" max="250" placeholder="Ejem: 1.60" required>
                     </div>
 
                     <div class="col-12">
-                        <label for="nivel_actividad" class="form-label text-muted">Nivel de Actividad Física</label>
+                        <label for="nivel_actividad" class="form-label text-muted">Actividad Física</label>
                         <select class="form-select" id="nivel_actividad" name="nivel_actividad" required>
                             <option selected disabled value="">Selecciona tu nivel...</option>
-                            <option value="sedentario">Sedentario (poco o ningún ejercicio)</option>
-                            <option value="ligero">Ligero (ejercicio ligero 1-3 días/semana)</option>
-                            <option value="moderado">Moderado (ejercicio moderado 3-5 días/semana)</option>
-                            <option value="activo">Activo (ejercicio fuerte 6-7 días/semana)</option>
-                            <option value="muy_activo">Muy Activo (ejercicio muy fuerte o trabajo físico)</option>
+                            <option value="sedentario">Sedentario </option>
+                            <option value="ligero">Ligero </option>
+                            <option value="moderado">Moderado </option>
+                            <option value="activo">Activo </option>
+                            <option value="muy_activo">Muy Activo</option>
                         </select>
                     </div>
                 </div>
@@ -79,10 +79,10 @@
 
         <div class="card mb-4 shadow-sm border-secondary">
             <div class="card-header bg-light text-secondary">
-                <h4 class="mb-0">Objetivos y Restricciones Dietéticas</h4>
+                <h4 class="mb-0">Objetivos y alergias</h4>
             </div>
             <div class="card-body bg-light">
-                <p class="fw-bold text-muted">¿Cuál es tu principal objetivo?</p>
+                <p class="fw-bold text-muted">¿Cuál es objetivo?</p>
                 <div class="row">
                     <div class="col-sm-6 col-md-4">
                         <div class="form-check">
@@ -128,13 +128,13 @@
                     </div>
                     <div class="col-md-6">
                         <label for="intolerancias" class="form-label text-muted">Intolerancias (Separadas por coma, ej: lactosa, gluten)</label>
-                        <input type="text" class="form-control" id="intolerancias" name="intolerancias" placeholder="Ej: lactosa, gluten">
+                        <input type="text" class="form-control" id="intolerancias" name="intolerancias" placeholder="Ej: lactios o gluten">
                     </div>
                 </div>
 
                 <hr class="my-4">
 
-                <p class="fw-bold text-muted">Tipo de Dieta Específica:</p>
+                <p class="fw-bold text-muted">Tipo de Dieta:</p>
                 <div class="row">
                     <div class="col-md-6">
                         <select class="form-select" id="tipo_dieta" name="tipo_dieta">
@@ -156,4 +156,7 @@
         </div>
     </form>
 </main>
+<div class="alert alert-danger" role="alert">
+Este sitio web no esta diseñado para bebes o niños pequeños ya que estos requieren de mas cuidados y dietas especificas, si necesita 
+aprender sobre cuidados en bebes y infantes acuda con un profesional, gracias.</div>
 {% endblock %}

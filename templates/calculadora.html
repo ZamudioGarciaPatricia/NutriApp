@@ -63,6 +63,107 @@
     </form>
 </div>
 
+
+<div class="row g-4 justify-content-center">
+    <div class="col-lg-5">
+    <div class="card shadow-sm h-100">
+        <div class="card-body">
+        <h2 class="card-title h5 mb-4 text-secondary">
+            Ingredientes y Cantidad (en Gramos)
+        </h2>
+
+        <form action="/calculate" method="POST">
+            <div id="contenedor-ingredientes" class="mb-3">
+            {% for i in range(1, 11) %}
+            <div class="ingrediente-item input-group mb-2">
+                <span class="input-group-text bg-light text-muted fw-bold"
+                >#{{ i }}</span
+                >
+                <input
+                type="text"
+                placeholder="Nombre del Ingrediente (Ej: Arroz, Carne)"
+                class="form-control"
+                name="nombre_{{ i }}"
+                value="{{ submitted_data['nombre_' ~ i] if submitted_data else '' }}"
+                />
+
+                <input
+                type="number"
+                placeholder="Gramos"
+                class="form-control w-25 text-end"
+                min="0"
+                name="gramos_{{ i }}"
+                value="{{ submitted_data['gramos_' ~ i] if submitted_data else '' }}"
+                />
+            </div>
+            {% endfor %}
+            </div>
+
+            <button
+            type="submit"
+            id="btn-calcular"
+            class="btn btn-success w-100 btn-lg"
+            >
+            Calcular Calorías
+            </button>
+        </form>
+
+        {% if submitted_data and not detalle_ingredientes %}
+        <div class="mt-4 p-3 rounded text-sm alert alert-warning">
+            No se introdujo ningún ingrediente válido con más de 0 gramos. Por
+            favor, revisa tus entradas.
+        </div>
+        {% endif %}
+        </div>
+    </div>
+    </div>
+
+    <div class="col-lg-7">
+    <div class="card shadow-sm h-100">
+        <div class="card-body">
+        <h2 class="card-title h5 mb-4 text-secondary">Resultado Total</h2>
+
+        <div id="resumen-resultados" class="text-center mb-4">
+            <div class="card bg-info text-white p-3 shadow">
+            <p class="mb-0 fs-5">Calorías Totales de la Receta (kcal)</p>
+            <p id="total-calorias" class="display-4 fw-bold mb-0">
+                {% if total_calorias is not none %}{{ total_calorias }}{% else
+                %}0{% endif %}
+            </p>
+            </div>
+        </div>
+
+        <h3 class="h6 border-bottom pb-2 mb-3 text-secondary">
+            Detalle de Contribución
+        </h3>
+
+        <div id="detalle-resultados" class="list-group">
+            {% if detalle_ingredientes %} {% for item in detalle_ingredientes %}
+            {% set bg_class = '' if item.encontrado else 'list-group-item-danger'
+            %} {% set text_class = 'fw-bold' if item.encontrado else 'text-danger'
+            %}
+
+            <div
+            class="list-group-item d-flex justify-content-between align-items-center {{ bg_class }}"
+            >
+            <span class="col-7 col-md-8 {{ text_class }}"
+                >{{ item.nombre }}</span
+            >
+            <span class="col-3 col-md-2 text-muted">{{ item.gramos }} g</span>
+            <span class="col-2 col-md-2 text-end text-primary fw-bold">
+                {{ item.calorias }} kcal
+            </span>
+            </div>
+            {% endfor %} {% else %}
+            <p class="text-muted fst-italic" id="mensaje-inicial">
+            Rellena los campos con ingredientes y haz clic en "Calcular".
+            </p>
+            {% endif %}
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
 </body>
 {% endblock %}
 
